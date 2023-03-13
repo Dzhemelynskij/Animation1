@@ -4,9 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation</title>
+    <title>Animation1</title>
+    <style>
+        body {
+            background-color: #444;
+            animation: sky 7s infinite;
+        }
+
+        .sun {
+            position: fixed;
+            bottom: 15%;
+            left: 10%;
+            width: 15vw;
+            height: 15vw;
+            background-color:darkred;
+            border-radius: 50%;
+            animation: sun 7s infinite;
+        }
+
+        .grass{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 30vh;
+            background-color: #222;
+            animation: grass 7s infinite;
+        }
+
+        @keyframes sky {
+            0% {
+                background-color: #000000;
+            }
+
+            30% {
+                background-color: rgb(186, 173, 173);
+            }
+
+            50% {
+                background-color: rgb(165, 226, 247);
+            }
+
+            80% {
+                background-color: rgb(186, 173, 173);
+            }
+
+            100% {
+                background-color: #222;
+            }
+        }
+
+        @keyframes grass {
+            0% {
+                background-color: #696969;
+            }
+
+            30% {
+                background-color: lightgreen;
+            }
+
+            50% {
+                background-color: rgb(2, 167, 27);
+            }
+
+            100% { 
+                background-color: #696969;
+            }
+        }
+
+        @keyframes sun {
+            0% {
+                bottom: 10%;
+                left: 5%
+            }
+
+            50% {
+                bottom: 65%;
+                background-color:yellow;
+
+            }
+
+            100% {
+                bottom: 5%;
+                left: 85%;
+                background-color:darkred;
+
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="sun"></div>
+    <div class="grass"></div>
 </body>
 </html>
